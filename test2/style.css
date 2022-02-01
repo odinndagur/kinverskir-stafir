@@ -1,0 +1,31 @@
+body {
+    max-width: 70vw;
+    margin:auto;
+    font-size:3rem;
+}
+    
+.single{
+    line-height:60px;
+    height:60px;
+}
+    
+.double{
+    /* width:150px; */
+    height:60px;
+    line-height:1;
+    display:inline-block;
+    vertical-align:middle;
+    max-lines:2;
+    font-size:1.5rem; 
+    vertical-align:center;
+    word-break: break-all;
+    break-inside: auto;
+}
+
+.test {
+    word-break: keep-all;
+    max-lines: 1;
+    text-overflow: hidden;
+    overflow-wrap: unset;
+    white-space: nowrap;
+}

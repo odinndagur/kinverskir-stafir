@@ -1,0 +1,64 @@
+<!-- PÆLINGAR
+Búa til línu með sama texta og sama formatti, 
+taka græja white-space:nowrap og taka scrollwidth
+af því til að sjá hvað línan væri stór ef hún fengi 
+allt heimsins pláss.
+
+Nota það til að gera hana að width/2.
+
+Finna hvað er mikið pláss eftir í
+elementinu og brjóta niður eftir því..
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kínverskir stafir</title>
+</head>
+
+<body>
+    <div class="text">
+        <span class="single" id="Test">
+        lol lina 
+        </span>
+        <span class="double">
+        lina 2 what up lalalala og ef þú bætir te
+        </span>
+        <span class="single">
+        lina 3 single 
+        </span>
+
+        <span class="test">
+            testa scrollwidth lala og svo er þetta línan sem er mega löng og eg veit ekki hvað og hvað
+        </span>
+    </div>
+<script>
+    let span = document.getElementsByClassName("double")[0];
+    let rect = span.getBoundingClientRect();
+    let width = rect.width;
+    let height = rect.height;
+    span.setAttribute("style","width:" + width/1.8 + "px")
+    console.log(width, width/2, height);
+
+
+    let temp = document.createElement("span");
+    temp.innerHTML = span.innerHTML;
+    document.body.appendChild(temp);
+    
+    </script>
+</body>
+
+<style>
+
+</style>
+
+
+
+
+</html>
